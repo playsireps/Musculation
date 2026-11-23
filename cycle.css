@@ -1,0 +1,71 @@
+/* Musculation – fonctions reprises du Demi-fond – Emilie BIDAULT et Quentin DELISLE */
+.ev-lv{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;color:#fff;font-weight:900;font-size:14px;vertical-align:middle}
+.ev-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.ev-chip{border:2px solid var(--line);border-radius:999px;background:#fff;padding:3px 10px;font-weight:800;font-size:14px;color:var(--ink)}
+.ev-chip.part{border-color:var(--orange);background:var(--orange-l)}.ev-chip.done{border-color:var(--green);background:var(--green-l)}
+.ev-chip.on{outline:3px solid var(--navy)}
+.ev-total{display:flex;align-items:baseline;gap:6px;background:var(--blue-l);border-radius:12px;padding:6px 14px}.ev-total b{font-size:32px}.ev-total span{font-weight:800}
+.ev-crit{border-top:2px solid var(--line);padding:10px 0}
+.ev-head{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:17px}
+.ev-calc{font-size:14px;font-weight:700;color:var(--grey);margin:4px 0}
+.ev-ds{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:6px}
+.ev-d{border:3px solid var(--line);border-left:8px solid var(--lc);border-radius:12px;background:#fff;text-align:left;padding:6px 8px;font-size:13px;color:var(--ink);display:flex;flex-direction:column;gap:4px}
+.ev-d b{font-size:14px}.ev-d.on{border-color:var(--lc);background:color-mix(in srgb,var(--lc) 16%,#fff)}
+.ev-sug{font-size:14px}
+.ev-vals{margin-top:6px}
+.ev-descs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:6px}.ev-descs textarea{min-height:80px;font-size:14px}
+.cx-pairs{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:6px;margin-top:8px}
+.cx-pair{position:relative;display:flex;align-items:center;gap:8px;border:2px solid var(--line);border-radius:12px;padding:4px 8px 4px 18px;font-size:15px;overflow:hidden}
+.cx-pair .band{position:absolute;left:0;top:0;bottom:0;width:10px}
+.cx-pair select{min-height:40px;padding:2px 6px;font-size:15px;flex:1}
+.cx-niv{margin:8px 0}.cx-niv .lbl{font-weight:900;display:block;margin-bottom:4px}
+.cx-niv-b{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.cx-niv-b button{border:3px solid var(--line);border-radius:12px;background:#fff;text-align:left;padding:6px;font-size:14px;font-weight:700;color:var(--ink)}
+.cx-niv-b button b{font-size:18px;color:var(--navy)}
+.cx-niv-b button.on{border-color:var(--navy);background:var(--blue-l)}
+.cx-meth{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:6px 0}
+.cx-meth select{min-height:40px;font-size:15px;padding:2px 8px;width:auto}
+/* fiches imprimées */
+.cx-fa-page{display:flex;flex-direction:column;gap:14px}
+.cx-fa{border:3px solid #0062C4;border-radius:14px;padding:12px;min-height:125mm;display:flex;flex-direction:column;gap:8px;color:#000}
+.cx-fa-h{display:flex;gap:12px;align-items:center}.cx-fa-h img{width:90px;height:90px;object-fit:contain}.cx-fa-ico{font-size:60px}
+.cx-fa-n{font-size:28px;font-weight:900;color:#0062C4}.cx-fa-g{font-weight:800;border-left:8px solid var(--gc);padding-left:6px}
+.cx-fa-c{font-size:16px;margin:0}.cx-fa-l ol{margin:2px 0;padding-left:22px}
+.cx-fa-s{font-size:14px;background:#F2F9FE;border-radius:8px;padding:6px}
+.cx-fa-rm{margin-top:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.cx-fa-rm span{border-bottom:2px dotted #000;padding-top:16px;font-size:13px}
+.evf{color:#000}.evf-h{display:flex;justify-content:space-between;align-items:center;border-bottom:3px solid #0062C4;padding-bottom:6px;margin-bottom:8px}
+.evf-n{font-size:24px;font-weight:900}.evf-t td,.evf-t th{font-size:13px}
+.evf-note{font-size:22px;margin:10px 0;text-align:right}
+.evf-app{border:2px solid #0062C4;border-radius:10px;padding:8px}.evf-app p{margin:4px 0}
+.evf-sign{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}.evf-sign div{border:2px solid #999;border-radius:10px;height:70px;padding:4px;font-size:13px}
+@media (max-width:800px){ .ev-ds,.ev-descs,.cx-niv-b{grid-template-columns:1fr 1fr} }
+/* ressources théoriques (savoirs.js) */
+.tb-prof{background:rgba(255,255,255,.18)!important;color:#fff!important;border:2px solid rgba(255,255,255,.6)!important;white-space:nowrap}
+.sv-ref{border:3px dashed var(--orange);border-radius:14px;padding:10px 12px;margin:8px 0;background:#FFF8EF}
+.sv-ref .row{flex-wrap:wrap;gap:8px;align-items:center}.sv-ref input{min-height:44px}
+.sv-q{font-weight:800;margin:8px 0 4px}
+.sv-sens{margin-top:10px;border-top:2px dashed var(--line);padding-top:8px}
+.sv-row{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:4px 0}.sv-row b{min-width:80px}
+.pchip.exp{border-style:dashed;border-color:var(--green)}
+.sv-dec{font-size:16px;background:var(--blue-l);border-radius:10px;padding:6px 10px;margin-top:6px}
+.sv-kf{display:grid;gap:2px;font-size:15px;margin:4px 0}
+.sv-ul{margin:0;padding-left:22px;font-size:16px;display:grid;gap:6px}
+.sv-pa{display:grid;gap:8px}.sv-pa-i{display:flex;gap:10px;align-items:flex-start}
+.sv-pa-l{flex:none;width:44px;height:44px;border-radius:12px;background:var(--navy);color:#fff;font-weight:900;font-size:24px;display:flex;align-items:center;justify-content:center}
+.sv-seg{margin-top:8px}.sv-seg button{flex:none}
+.sv-cat{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px;margin-top:8px}
+.sv-ex{border:2px solid var(--line);border-radius:12px;padding:8px;display:flex;flex-direction:column;gap:4px;align-items:flex-start}
+.sv-quiz{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}.sv-quiz .btn{min-height:60px;font-size:18px}
+.sv-mono{font-family:ui-monospace,Menlo,monospace;font-size:13px}
+.sv-prof{margin-bottom:8px}
+.sv-alea{background:#FFF1DC}
+.cx-ordre{font-size:14px;margin:2px 0 6px}
+.cx-fa-poss{margin-top:auto}.cx-fa-poss table{width:100%;border-collapse:collapse;margin-top:4px}.cx-fa-poss td{border:1.5px solid #000;padding:4px 6px;text-align:center;height:26px;font-size:13px}
+/* ---------- Espace enseignant en 8 étapes (modèle Demi-fond) ---------- */
+.pm-btn .step{left:12px;top:10px}
+.pm-btn.hot{border-color:var(--orange);box-shadow:0 0 0 4px rgba(245,154,27,.25),0 5px 0 rgba(0,46,110,.25)}
+.sect-d{font-weight:700;font-size:14px;margin:2px 0 6px}
+.sect-head{margin-bottom:10px}
+.sect-nav{margin-bottom:10px;flex-wrap:wrap}
+.sect-head .class-chip,.card.center .class-chip{min-height:38px!important;font-size:15px!important;padding:3px 12px!important;border-width:2px!important}
+.sect-head .class-chips,.card.center .class-chips{margin:4px 0 6px;gap:6px}

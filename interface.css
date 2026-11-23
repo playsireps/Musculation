@@ -1,0 +1,65 @@
+/* Musculation – interface sur le modèle CA1 Demi-fond – Emilie BIDAULT · Quentin DELISLE */
+/* Barre du haut */
+.savestate{font-size:13px;font-weight:700;opacity:.95;color:#fff;align-self:center;white-space:nowrap}
+.savestate.clean::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;background:#7CE08A}
+#tb-right{align-items:center}
+#tb-right .btn{background:#fff;color:var(--navy);border-color:#fff}
+#tb-right .tb-prof{background:#fff!important;color:var(--navy)!important;border-color:#fff!important}
+@media (max-width:760px){ #tb-right .savestate{display:none} }
+/* Signature (modèle) */
+#signature b{font-weight:900}
+/* Menu enseignant : 2 colonnes de grandes étapes */
+.pmenu.steps{grid-template-columns:repeat(2,1fr);gap:14px;margin:10px 0}
+.pmenu.steps .pm-btn{min-height:150px!important;font-size:24px!important;padding:16px!important;border-width:4px;border-radius:20px}
+.pmenu.steps .pm-btn .ico{font-size:42px!important}
+.pmenu.steps .pm-btn small{font-size:14px!important;line-height:1.3}
+.pmenu.steps .pm-btn .step{width:38px;height:38px;font-size:20px;left:14px;top:12px}
+@media (max-width:640px){ .pmenu.steps{grid-template-columns:1fr} .pmenu.steps .pm-btn{min-height:110px!important;font-size:21px!important} }
+/* Accueil enseignant */
+.home-grid:not(.one):not(.two):not(.row4){grid-template-columns:repeat(3,1fr);max-width:900px;width:100%}
+.home-btn.prof{background:var(--navy)}
+@media (max-width:640px){ .home-grid:not(.one):not(.two):not(.row4){grid-template-columns:1fr} }
+/* Panneau fixe : chrono de récupération + leçon du jour */
+.dock{position:fixed;z-index:30;background:#fff;border:3px solid var(--navy);border-radius:16px;box-shadow:0 10px 30px rgba(0,46,110,.20);display:grid;gap:8px;padding:8px;align-content:start}
+.dock[hidden]{display:none!important}
+@media (min-width:900px){
+  .dock{top:calc(var(--hh,70px) + 10px);right:10px;width:324px;max-height:calc(100% - var(--hh,70px) - 56px);overflow:auto}
+  body.has-dock main{max-width:none;margin:0 344px 0 0}
+  body.has-dock #signature{width:324px;box-sizing:border-box;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:11.5px!important}
+}
+@media (max-width:899px){
+  .dock{left:6px;right:6px;bottom:6px;max-height:46vh;overflow:auto;padding:6px}
+  body.has-dock main{padding-bottom:calc(var(--dh,150px) + 14px)}
+  body.has-dock #signature,body.has-dock #app-version{display:none}
+  .dk-chrono .dk-t{font-size:38px}
+  .watch{width:46px;height:52px}
+}
+.dk-chrono{background:var(--ink);color:#fff;border-radius:12px;padding:10px 12px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:4px 10px;align-items:center;min-width:0}
+.dk-chrono .ctrls,.dk-chrono .dk-more{grid-column:1/-1}
+.dk-chrono .dk-t{font-size:46px;font-weight:900;line-height:.95;font-variant-numeric:tabular-nums}
+.dk-chrono .dk-ph{font-size:16px;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
+.dk-chrono .dk-ph.is-rest{color:#ffb35c}.dk-chrono .dk-ph.is-run{color:#7fe39a}
+.dk-chrono .dk-sub{opacity:.75;font-size:12.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dk-course{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;opacity:.7;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.dk-chrono .ctrls{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.dk-chrono .btn{background:#fff;border:0;color:var(--navy);padding:4px 10px;min-height:40px;font-size:15px}
+.dk-chrono .btn.primary{background:var(--orange);color:#fff}
+.dk-toggle{align-self:start;background:#fff;border:0;color:var(--navy);font-weight:900;border-radius:10px;width:36px;height:36px;cursor:pointer;font-size:14px}
+.dk-more{display:flex;flex-direction:column;gap:2px;font-size:13px}.dk-more:empty{display:none}.dk-more .over{color:#7fe39a}
+.watch{width:58px;height:66px}
+.w-crown{fill:#9aa4b8}.w-body{fill:#001E4A;stroke:#C9D1E0;stroke-width:3}.w-track{fill:none;stroke:rgba(255,255,255,.14);stroke-width:6}
+.w-ring{fill:none;stroke:var(--orange);stroke-width:6;stroke-linecap:round;transition:stroke-dashoffset .25s linear}
+.w-ring.w-rest{stroke:#ffb35c}.w-ring.w-done{stroke:#7CE08A}
+.w-hand{stroke:#fff;stroke-width:2.5;stroke-linecap:round}.w-hub{fill:#fff}
+.dock.min .watch,.dock.min .dk-course,.dock.min .dk-sub{display:none}
+.dock.min .dk-chrono{padding:6px 10px}.dock.min .dk-chrono .dk-t{font-size:30px}
+.dk-info{display:grid;gap:8px;padding:2px 4px}
+.dk-lt{display:flex;gap:10px;align-items:center}
+.dk-num{flex:none;width:44px;height:44px;border-radius:12px;background:var(--tc);color:#fff;font-weight:900;font-size:22px;display:flex;align-items:center;justify-content:center}
+.dk-lt b{display:block;font-size:17px;color:var(--navy)}.dk-lt small{font-size:13px;color:var(--grey);font-weight:700}
+.dk-stats{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:14px;font-weight:700}
+.dk-legend{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:12.5px;color:var(--grey);font-weight:700}
+.dk-legend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:4px;vertical-align:-1px}
+.dk-btns{display:flex;flex-wrap:wrap;gap:6px}.dk-btns .btn{min-height:40px;font-size:14px;padding:4px 10px}
+/* le bandeau des chronos en bas laisse la place au panneau */
+body.has-dock .rests{display:none}
